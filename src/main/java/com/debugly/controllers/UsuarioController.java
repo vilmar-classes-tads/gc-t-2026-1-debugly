@@ -1,4 +1,9 @@
+package com.debugly.controllers;
+
 import java.util.Scanner;
+
+import com.debugly.entities.Usuario;
+import com.debugly.services.UsuarioService;
 
 public class UsuarioController {
 

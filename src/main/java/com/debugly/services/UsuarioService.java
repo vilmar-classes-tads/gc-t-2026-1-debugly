@@ -1,4 +1,9 @@
+package com.debugly.services;
+
 import java.util.List;
+
+import com.debugly.entities.Usuario;
+import com.debugly.repositories.UsuarioRepository;
 
 public class UsuarioService {
 

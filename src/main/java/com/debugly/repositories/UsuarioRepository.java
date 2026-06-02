@@ -1,6 +1,10 @@
+package com.debugly.repositories;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+
+import com.debugly.entities.Usuario;
 
 public class UsuarioRepository {
 
