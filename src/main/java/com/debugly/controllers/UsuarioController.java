@@ -1,4 +1,4 @@
-package com.debugly.controllers
+package com.debugly.controllers;
 
 import java.util.Scanner;
 
