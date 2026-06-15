@@ -2,6 +2,8 @@ package com.debugly.services;
 
 import java.time.LocalDate;
 import java.util.List;
+import com.debugly.entities.Edital;
+import com.debugly.repositories.EditalRepository;
 
 public class EditalService {
 

@@ -1,3 +1,5 @@
+package com.debugly.entities;
+
 public class Projeto {
     private static Long contadorId = 1L;
     

@@ -1,3 +1,5 @@
+package com.debugly.entities;
+
 public enum Perfil {
     ROLE_ADMINISTRADOR,
     ROLE_COORDENADOR,
