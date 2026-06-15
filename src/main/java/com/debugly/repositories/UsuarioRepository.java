@@ -5,6 +5,8 @@ import java.util.List;
 import java.util.Optional;
 import com.debugly.entities.Usuario;
 
+import com.debugly.entities.Usuario;
+
 public class UsuarioRepository {
 
     private final List<Usuario> usuarios = new ArrayList<>();

@@ -4,6 +4,9 @@ import java.util.Scanner;
 import com.debugly.entities.Usuario;
 import com.debugly.services.UsuarioService;
 
+import com.debugly.entities.Usuario;
+import com.debugly.services.UsuarioService;
+
 public class UsuarioController {
 
     private final UsuarioService usuarioService;

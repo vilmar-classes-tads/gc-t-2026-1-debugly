@@ -7,15 +7,15 @@ public class Projeto {
     private String titulo;
     private String resumo;
     private Usuario coordenador;  // Usuário com perfil COORDENADOR
-    private Edital edital;
+    //private Edital edital;
     private String status; // EX: SUBMETIDO, EM_ANALISE, APROVADO, REPROVADO
     
-    public Projeto(String titulo, String resumo, Usuario coordenador, Edital edital) {
+    public Projeto(String titulo, String resumo, Usuario coordenador) {
         this.id = contadorId++;
         this.titulo = titulo;
         this.resumo = resumo;
         this.coordenador = coordenador;
-        this.edital = edital;
+       // this.edital = edital;
         this.status = "SUBMETIDO";
     }
 
@@ -31,8 +31,8 @@ public class Projeto {
     public Usuario getCoordenador() { return coordenador; }
     public void setCoordenador(Usuario coordenador) { this.coordenador = coordenador; }
 
-    public Edital getEdital() { return edital; }
-    public void setEdital(Edital edital) { this.edital = edital; }
+   // public Edital getEdital() { return edital; }
+    //public void setEdital(Edital edital) { this.edital = edital; }
 
     public String getStatus() { return status; }
     public void setStatus(String status) { this.status = status; }
