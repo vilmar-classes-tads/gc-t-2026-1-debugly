@@ -7,7 +7,6 @@ on:
       - develop
       - 'feature/**' # Captura qualquer push em branches como feature/issue0, feature/login, etc.
       - 'issue-**'
-      
   pull_request:
     branches:
       - main
