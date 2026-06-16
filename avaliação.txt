@@ -1,0 +1,10 @@
+Avaliação 1:
+
+1 - depois que terminar a issue 2 tem fazer um pull request para a branch main.
+2 - A main também precisa de uma "Branch protection rules"
+3 - Tá faltando fechar as issues que você já terminaram
+4 - A implementação do código das iassues 0, 1 e 2 tá faltando quanto?
+5 - A pasta target precisa ser colocada no gitignore.
+6 - Tá faltando o docker.
+
+cada problema desse precisa ser corrigido via Issue.
