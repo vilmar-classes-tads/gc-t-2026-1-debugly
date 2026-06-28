@@ -33,7 +33,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.debugly.App</mainClass>
+                            <mainClass>com.debugly.AppTest</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
