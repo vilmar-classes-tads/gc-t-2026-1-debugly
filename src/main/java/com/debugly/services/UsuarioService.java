@@ -67,8 +67,8 @@ public class UsuarioService {
     }
 
     private void validarSenha(String senha) {
-        if (senha.length() < 6)
-            throw new IllegalArgumentException("Senha deve ter no mínimo 6 caracteres.");
+        if (senha.length() < 8)
+            throw new IllegalArgumentException("Insira uma senha com pelo menos 8 caracteres.");
     }
 
     private void validarUnicidadeCpf(String cpf) {
