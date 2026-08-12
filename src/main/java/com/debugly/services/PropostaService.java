@@ -13,7 +13,17 @@ public class PropostaService {
         this.propostaRepository = propostaRepository;
     }
 
-    public Proposta cadastrar(Proposta proposta) {
+    public Proposta cadastrar(String titulo, String resumo, List<String> palavrasChave,
+                               String publicoAlvo, String areaTematica, String campus,
+                               List<Integer> ods, boolean aceiteTermoCompromisso) {
+
+        validarCamposObrigatorios(titulo, resumo, palavrasChave, publicoAlvo, areaTematica, campus);
+        validarOds(ods);
+        validarAceiteTermo(aceiteTermoCompromisso);
+
+        Proposta proposta = new Proposta(titulo, resumo, palavrasChave, publicoAlvo,
+                areaTematica, campus, ods, aceiteTermoCompromisso);
+
         return propostaRepository.salvar(proposta);
     }
 
@@ -51,5 +61,33 @@ public class PropostaService {
                     "Não é possível editar uma proposta com status " + status + "."
             );
         }
+    }
+
+    // ---- Validações privadas (Issue 2) ----
+
+    private void validarCamposObrigatorios(String titulo, String resumo, List<String> palavrasChave,
+                                            String publicoAlvo, String areaTematica, String campus) {
+        if (titulo == null || titulo.isBlank())
+            throw new IllegalArgumentException("Título é obrigatório.");
+        if (resumo == null || resumo.isBlank())
+            throw new IllegalArgumentException("Resumo é obrigatório.");
+        if (palavrasChave == null || palavrasChave.isEmpty())
+            throw new IllegalArgumentException("Palavras-chave são obrigatórias.");
+        if (publicoAlvo == null || publicoAlvo.isBlank())
+            throw new IllegalArgumentException("Público-alvo é obrigatório.");
+        if (areaTematica == null || areaTematica.isBlank())
+            throw new IllegalArgumentException("Área Temática é obrigatória.");
+        if (campus == null || campus.isBlank())
+            throw new IllegalArgumentException("Campus é obrigatório.");
+    }
+
+    private void validarOds(List<Integer> ods) {
+        if (ods == null || ods.isEmpty())
+            throw new IllegalArgumentException("É obrigatório selecionar pelo menos um ODS.");
+    }
+
+    private void validarAceiteTermo(boolean aceiteTermoCompromisso) {
+        if (!aceiteTermoCompromisso)
+            throw new IllegalArgumentException("O aceite do Termo de Compromisso é obrigatório.");
     }
 }

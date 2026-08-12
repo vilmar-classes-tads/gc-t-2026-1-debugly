@@ -9,7 +9,8 @@ public class Projeto {
     private Usuario coordenador;  // Usuário com perfil COORDENADOR
     private Edital edital;
     private String status; // EX: SUBMETIDO, EM_ANALISE, APROVADO, REPROVADO
-    
+    private String campus;
+
     public Projeto(String titulo, String resumo, Usuario coordenador) {
         this.id = contadorId++;
         this.titulo = titulo;
@@ -36,4 +37,7 @@ public class Projeto {
 
     public String getStatus() { return status; }
     public void setStatus(String status) { this.status = status; }
+
+    public String getCampus() { return campus; }
+    public void setCampus(String campus) { this.campus = campus; }
 }
